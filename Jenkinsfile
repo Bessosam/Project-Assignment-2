@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'mvn clean -f backend'
                 echo 'downloading github project...'
-                git branch: 'main', url: 'https://github.com/Bessosam/Project-Assignment-2.git''
+                git branch: 'main', url: 'https://github.com/Bessosam/Project-Assignment-2.git'
             }
         }
 
