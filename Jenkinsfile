@@ -39,13 +39,11 @@ pipeline {
                 echo 'packaged'
             }
         }
-    }
-
-    post {
-        always {
-            echo 'generating test report....'
-            junit 'target/*reports/**/*.xml'
-            echo 'test report generated'
+       stage('deploy') {
+            steps {
+               sh 'cp backend/target/ROOT.war /artifacts'
+            }
         }
     }
+
 }
