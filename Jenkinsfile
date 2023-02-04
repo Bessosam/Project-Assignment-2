@@ -11,7 +11,7 @@ pipeline {
         stage('clean and checkout') {
             steps {
                 sh 'mvn clean -f backend'
-                echo 'downloading github project...'
+                echo 'Cloning GitHub repository...'
                 git branch: 'main', url: 'https://github.com/Bessosam/Project-Assignment-2.git'
             }
         }
